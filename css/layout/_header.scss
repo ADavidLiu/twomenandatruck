@@ -1,0 +1,133 @@
+.header {
+    padding: 15px 0 0 0;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: all .25s;
+    backface-visibility: hidden;
+    @include atMedium {
+        padding: 1.875rem 0;
+    }
+    @include atExtralarge {
+        padding: 1.875rem 4.375rem;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include atLarge {
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 50%;
+        max-width: 11.75rem;
+    }
+
+    &__controls {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        margin-top: 15px;
+        @include atMedium {
+            padding: 0 1.25rem;
+            margin-top: 0;
+            flex: 1;
+            width: auto;
+        }
+
+        &-item {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 1.25rem 5px 1.25rem;
+            position: relative;
+            cursor: pointer;
+            flex: 1;
+            @include atMedium {
+                padding-bottom: 0px;
+                flex: initial;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: $color-primary;
+                opacity: 0;
+                transition: all .25s;
+                backface-visibility: hidden;
+                pointer-events: none;
+                @include atMedium {
+                    bottom: -7px;
+                }
+            }
+
+            p,
+            h3 {
+                color: $color-primary-alt;
+                transition: all .25s;
+                backface-visibility: hidden;
+                font-weight: 400;
+            }
+
+            h3 {
+                display: none;
+                @include atMedium {
+                    display: inline-block;
+                }
+            }
+
+            & + & {
+                @include atMedium {
+                    margin-left: 1.25rem;
+                }
+            }
+
+            &:hover {
+                p,
+                h3 {
+                    color: $color-primary;
+                }
+            }
+
+            &.is-active {
+                p,
+                h3 {
+                    color: $color-primary;
+                }
+
+                h3 {
+                    font-weight: 500;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        min-width: 0;
+        padding: 0 1.5rem;
+    }
+
+    &.is-scrolled {
+        background-color: $color-white;
+        box-shadow: 0 0 1rem rgba($color-gray, .25);
+    }
+}

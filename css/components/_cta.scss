@@ -1,0 +1,35 @@
+.cta {
+    margin: 0 0 3.75rem 0;
+    padding: 5rem 2.5rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(152.46deg, rgba($color-white, 0.8) -9.06%, transparent 99.05%), $color-primary;
+    background-blend-mode: soft-light, normal;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 2.0625rem;
+    }
+
+    &__btns {
+        @include atMedium {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            width: 100%;
+            @include atMedium {
+                width: auto;
+            }
+            
+            & + .btn {
+                margin-top: 1.75rem;
+                @include atMedium {
+                    margin-top: 0;
+                    margin-left: 1.75rem;
+                }
+            }
+        }
+    }
+}

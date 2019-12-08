@@ -1,0 +1,16 @@
+.info {
+    padding-bottom: 6.25rem;
+
+    &__img {
+        background-image: url("../images/boxes.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: .9375rem;
+        height: 25rem;
+        width: 100%;
+        @include atMedium {
+            height: 100%;
+        }
+    }
+}

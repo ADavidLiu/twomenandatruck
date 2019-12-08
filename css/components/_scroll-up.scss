@@ -1,0 +1,26 @@
+.scroll-up {
+    position: fixed;
+    z-index: 1;
+    bottom: 3rem;
+    right: 7vw;
+    transform: translateX(30%) scale(0);
+    opacity: 0;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transition: all .5s;
+    width: 3.25rem;
+    height: 3.25rem;
+    @include atHuge {
+        right: 10vw;
+    }
+
+    &.is-active {
+        transform: translateX(30%) scale(1);
+        opacity: 1;
+
+        &:hover {
+            transform: translateX(30%) scale(1.05);
+        }
+    }
+}

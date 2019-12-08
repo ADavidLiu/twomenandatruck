@@ -1,0 +1,55 @@
+.btn {
+    background-color: $color-primary-lgt;
+    height: 3.333rem;
+    border-radius: .4167rem;
+    color: $color-white;
+    cursor: pointer;
+    transition: all .25s;
+    backface-visibility: hidden;
+    font-weight: 500;
+    min-width: 13.333rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @extend .p;
+    @include linkStates($color-white, none);
+    @include atMedium {
+        width: auto;
+        height: 2.5rem;
+        border-radius: .3125rem;
+        min-width: 10rem;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+    }
+
+    &--lg {
+        min-width: 15rem;
+        @include atMedium {
+            min-width: 11.25rem;
+        }
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-gray-drk-alt;
+        @include linkStates($color-gray-drk-alt, none);
+
+        &:hover {
+            background-color: $color-gray-drk-alt;
+            color: $color-white;
+        }
+    }
+
+    &--white-o {
+        background-color: transparent;
+        border: 2px solid $color-white;
+        color: $color-white;
+
+        &:hover {
+            background-color: rgba($color-white, .25);
+        }
+    }
+}

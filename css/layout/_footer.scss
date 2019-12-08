@@ -1,0 +1,76 @@
+.footer {
+    background-color: $color-gray-lgt-2;
+    padding: 3.4375rem 0;
+    text-align: center;
+    @include atMedium {
+        text-align: left;
+    }
+
+    &__logo {
+        display: block;
+        width: 15.667rem;
+        margin: 0 auto 2.5rem auto;
+        @include atMedium {
+            width: 11.75rem;
+            margin: 0 0 1rem 0;
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &__address {
+        @include atMedium {
+            text-align: right;
+        }
+
+        i {
+            font-size: 1.333rem;
+            @include atMedium {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: .9375rem;
+        @include atMedium {
+            justify-content: flex-end;
+            margin-top: .5rem;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.1875rem;
+            width: 2.1875rem;
+            border-radius: 50%;
+            border: 1px solid $color-gray;
+            font-size: .875rem;
+            transition: all .25s;
+            cursor: pointer;
+            backface-visibility: hidden;
+            @include atMedium {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                background-color: $color-primary;
+                border-color: $color-primary;
+                color: $color-white;
+            }
+
+            & + & {
+                margin-left: 1.667rem;
+                @include atMedium {
+                    margin-left: 1.25rem;
+                }
+            }
+        }
+    }
+}

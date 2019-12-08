@@ -1,0 +1,39 @@
+// Colors
+$color-primary: #00AFDE;
+$color-primary-lgt: #00BFF3;
+
+$color-primary-alt: #A0C4D8;
+$color-primary-alt-2: #B9D2DB;
+$color-primary-alt-3: #D9F4FC;
+$color-primary-alt-4: #FBFEFF;
+
+$color-gray: #333333;
+$color-gray-drk: #232323;
+$color-gray-drk-alt: #404D53;
+$color-gray-lgt: #777777;
+$color-gray-lgt-2: #F6F6F6;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+
+// Typography
+@font-face {
+    font-family: "GothamPro";
+    font-weight: 400;
+    src: url("../fonts/GothamPro-Reg.otf");
+}
+
+@font-face {
+    font-family: "GothamPro";
+    font-weight: 500;
+    src: url("../fonts/GothamPro-Med.otf");
+}
+
+@font-face {
+    font-family: "GothamPro";
+    font-weight: 700;
+    src: url("../fonts/GothamPro-Bold.otf");
+}
+
+$font-main: "GothamPro", "Helvetica", "Arial", sans-serif;

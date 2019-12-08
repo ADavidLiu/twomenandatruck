@@ -1,0 +1,26 @@
+// Color
+.u-color {
+    &-primary {
+        color: $color-primary;
+    }
+
+    &-gray {
+        color: $color-gray;
+    }
+
+    &-white {
+        color: $color-white;
+    }
+}
+
+
+// Font weight
+.u-weight {
+    &-med {
+        font-weight: 500;
+    }
+
+    &-reg {
+        font-weight: 400;
+    }
+}

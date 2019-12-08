@@ -1,0 +1,39 @@
+#fp {
+    &-nav {
+        @include atSmall {
+            right: 7vw !important;
+        }
+        @include atHuge {
+            right: 10vw !important;
+        }
+
+        ul {
+            li {
+                margin: 0;
+
+                a {
+                    transition: all .25s;
+                    cursor: pointer;
+                    backface-visibility: hidden;
+                    height: 10px;
+                    width: 10px;
+                    background-color: $color-primary-alt-2;
+                    border-radius: 50%;
+
+                    &.active,
+                    &:hover {
+                        background-color: $color-primary;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+
+                & + li {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
